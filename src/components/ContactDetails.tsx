@@ -22,9 +22,12 @@ function ContactDetails() {
                         <div className="border border-white p-6 rounded-2xl">
                             <h3 className="font-bold mb-2">Наши соцсети</h3>
                             <div className="flex gap-4 text-2xl">
-                                <FaWhatsapp className="hover:text-purple-400 cursor-pointer" />
-                                <FaTelegramPlane className="hover:text-purple-400 cursor-pointer" />
-                                <FaViber className="hover:text-purple-400 cursor-pointer" />
+                                <a href="https://api.whatsapp.com/send?phone=79529813998" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#E000D7]">
+                                    <FaWhatsapp className="cursor-pointer" />
+                                </a>
+                                <a href="https://t.me/Bogorodov_Neon" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#E000D7]">
+                                    <FaTelegramPlane className="cursor-pointer" />
+                                </a>
                             </div>
                         </div>
                     </div>
