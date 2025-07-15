@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import giftImage from '../assets/heart.svg';
+import giftImage from '../assets/heart.webp';
 import apiClient from '../services/api';
 
 interface Answer {

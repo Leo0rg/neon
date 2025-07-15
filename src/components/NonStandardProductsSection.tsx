@@ -1,4 +1,4 @@
-import nonStandardImage from '../assets/non-standet.svg'; 
+import nonStandardImage from '../assets/non-standet.webp'; 
 
 const NonStandardProductsSection = () => {
   return (

@@ -1,4 +1,4 @@
-import designImage from '../assets/design.svg'; 
+import designImage from '../assets/design.webp'; 
 
 const DesignSection = () => (
   <section id="design" className="bg-[#161616] text-white pt-16 md:pt-24">

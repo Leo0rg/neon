@@ -1,4 +1,4 @@
-import heroBackground from '../assets/servise.svg';
+import heroBackground from '../assets/servise.webp';
 
 function ServiceHero() {
   return (

@@ -1,4 +1,4 @@
-import giftBg from '../assets/gift.svg';
+import giftBg from '../assets/gift.webp';
 
 interface GiftSectionProps {
   onOpenSurvey: () => void;

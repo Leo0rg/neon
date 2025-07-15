@@ -1,4 +1,4 @@
-import guaranteeImage from '../assets/guarantee.svg';
+import guaranteeImage from '../assets/guarantee.webp';
 
 const WarrantySection = () => {
   return (

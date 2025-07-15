@@ -1,4 +1,4 @@
-import heroBackground from '../assets/contacts.svg';
+import heroBackground from '../assets/contacts.webp';
 
 function ContactsHero() {
   return (

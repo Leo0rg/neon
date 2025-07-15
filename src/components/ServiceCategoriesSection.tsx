@@ -1,11 +1,11 @@
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import card1 from '../assets/card1.svg';
-import card2 from '../assets/card2.svg';
-import card3 from '../assets/card3.svg';
-import card4 from '../assets/card4.svg';
-import card5 from '../assets/card5.svg';
-import card6 from '../assets/card6.svg';
+import card1 from '../assets/card1.webp';
+import card2 from '../assets/card2.webp';
+import card3 from '../assets/card3.webp';
+import card4 from '../assets/card4.webp';
+import card5 from '../assets/card5.webp';
+import card6 from '../assets/card6.webp';
 
 interface ServiceCategory {
   id: number;

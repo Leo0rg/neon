@@ -1,16 +1,16 @@
 import React, { useState, useRef } from 'react';
-import Icon1 from '../assets/Icon1.svg';
-import Icon2 from '../assets/Icon2.svg';
-import Icon3 from '../assets/Icon3.svg';
-import Icon4 from '../assets/Icon4.svg';
-import Icon5 from '../assets/Icon5.svg';
-import Icon6 from '../assets/Icon6.svg';
-import icon1v2 from '../assets/icon1v2.svg';
-import icon2v2 from '../assets/icon2v2.svg';
-import icon3v2 from '../assets/icon3v2.svg';
-import icon4v2 from '../assets/icon4v2.svg';
-import icon5v2 from '../assets/icon5v2.svg';
-import icon6v2 from '../assets/icon6v2.svg';
+import Icon1 from '../assets/Icon1.webp';
+import Icon2 from '../assets/Icon2.webp';
+import Icon3 from '../assets/Icon3.webp';
+import Icon4 from '../assets/Icon4.webp';
+import Icon5 from '../assets/Icon5.webp';
+import Icon6 from '../assets/Icon6.webp';
+import icon1v2 from '../assets/icon1v2.webp';
+import icon2v2 from '../assets/icon2v2.webp';
+import icon3v2 from '../assets/icon3v2.webp';
+import icon4v2 from '../assets/icon4v2.webp';
+import icon5v2 from '../assets/icon5v2.webp';
+import icon6v2 from '../assets/icon6v2.webp';
 
 interface AdvantageCard {
   id: number;
@@ -107,7 +107,7 @@ function AdvantagesSection() {
     <section className="py-8 md:py-16 bg-[#161616] text-white overflow-hidden">
         <div 
           ref={scrollContainerRef}
-        className={`flex overflow-x-auto pb-8 gap-5 snap-x snap-mandatory scrollbar-hide pl-[5%] md:pl-[15%] pr-4 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`flex overflow-x-auto pb-8 gap-5 snap-x snap-mandatory scrollbar-hide pl-[5%] md:pl-[15%] pr-4 ${isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         onMouseDown={onMouseDown}
         onMouseLeave={onMouseLeave}
@@ -127,7 +127,7 @@ function AdvantagesSection() {
                     : 'border border-white'
                 }`}
               >
-                <img src={hoveredId === card.id ? card.iconHover : card.icon} alt={card.title} className="w-16 h-16 md:w-28 md:h-28 mb-6 md:mb-8" />
+                <img draggable="false" src={hoveredId === card.id ? card.iconHover : card.icon} alt={card.title} className="w-16 h-16 md:w-28 md:h-28 mb-6 md:mb-8" />
                 <h3 className="text-xl md:text-2xl font-medium mb-3 md:mb-4">{card.title}</h3>
                 <p className="text-sm md:text-base text-gray-300">{card.description}</p>
               </div>

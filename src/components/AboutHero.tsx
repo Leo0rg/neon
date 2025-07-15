@@ -1,4 +1,4 @@
-import heroBackground from '../assets/banner_about.svg';
+import heroBackground from '../assets/banner_about.webp';
 
 function AboutHero() {
   return (

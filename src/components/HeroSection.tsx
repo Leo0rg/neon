@@ -1,4 +1,4 @@
-import heroBackground from '../assets/hero-background.svg';
+import heroBackground from '../assets/hero-background.webp';
 
 interface HeroSectionProps {
   onOpenSurvey: () => void;

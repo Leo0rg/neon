@@ -1,4 +1,4 @@
-import neonSignImage from '../assets/neon_sign.svg';
+import neonSignImage from '../assets/neon_sign.webp';
 
 const Card = ({
   children,

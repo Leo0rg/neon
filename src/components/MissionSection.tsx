@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import missionSvg from '../assets/mission.svg';
+import missionSvg from '../assets/mission.webp';
 
 const MissionSection = () => {
   return (

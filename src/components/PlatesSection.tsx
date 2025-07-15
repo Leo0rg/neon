@@ -1,4 +1,4 @@
-import tableImage from '../assets/table.svg';
+import tableImage from '../assets/table.webp';
 
 const PlatesSection = () => {
   return (

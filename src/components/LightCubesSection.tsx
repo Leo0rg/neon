@@ -1,6 +1,6 @@
-import cube from '../assets/cube.svg';
-import cube2 from '../assets/cube2.svg';
-import cube3 from '../assets/cube3.svg';
+import cube from '../assets/cube.webp';
+import cube2 from '../assets/cube2.webp';
+import cube3 from '../assets/cube3.webp';
 
 const Card = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <div className={`border border-white rounded-3xl p-4 md:py-[60px] md:px-[40px] ${className}`}>

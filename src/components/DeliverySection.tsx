@@ -1,4 +1,4 @@
-import deliveryImage from '../assets/delivery.svg';
+import deliveryImage from '../assets/delivery.webp';
 
 const DeliverySection = () => {
   return (

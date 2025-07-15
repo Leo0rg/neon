@@ -1,4 +1,4 @@
-import paymentImage from '../assets/payment.svg';
+import paymentImage from '../assets/payment.webp';
 
 const PaymentSection = () => {
   return (

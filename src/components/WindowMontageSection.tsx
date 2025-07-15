@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 
-import instructionImg1 from '../assets/instruction-window.svg';
-import instructionImg2 from '../assets/instruction-window2.svg';
-import instructionImg3 from '../assets/instruction-window3.svg';
-import instructionImg4 from '../assets/instruction-window4.svg';
-import instructionImg5 from '../assets/instruction-window5.svg';
-import instructionImg6 from '../assets/instruction-window6.svg';
-import instructionImg7 from '../assets/instruction-window7.svg';
+import instructionImg1 from '../assets/instruction-window.webp';
+import instructionImg2 from '../assets/instruction-window2.webp';
+import instructionImg3 from '../assets/instruction-window3.webp';
+import instructionImg4 from '../assets/instruction-window4.webp';
+import instructionImg5 from '../assets/instruction-window5.webp';
+import instructionImg6 from '../assets/instruction-window6.webp';
+import instructionImg7 from '../assets/instruction-window7.webp';
 
 
 const instructionImages = [

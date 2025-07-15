@@ -1,4 +1,4 @@
-import contactBg from '../assets/contakt.svg';
+import contactBg from '../assets/contakt.webp';
 
 const ContactSection = () => {
   return (

@@ -1,15 +1,15 @@
 import { useRef } from 'react';
-import montageImage from '../assets/montage.svg'; // Заглушка, замените на montage.svg
+import montageImage from '../assets/montage.webp'; // Заглушка, замените на montage.webp
 
 // --- Изображения для инструкции ---
 // !ВАЖНО: Замените '...' на реальные пути к вашим 7 изображениям
-import instructionImg1 from '../assets/instruction1.svg'; // Заглушка
-import instructionImg2 from '../assets/instruction2.svg'; // Заглушка
-import instructionImg3 from '../assets/instruction3.svg'; // Заглушка
-import instructionImg4 from '../assets/instruction4.svg'; // Заглушка
-import instructionImg5 from '../assets/instruction5.svg'; // Заглушка
-import instructionImg6 from '../assets/instruction6.svg'; // Заглушка
-import instructionImg7 from '../assets/instruction7.svg'; // Заглушка
+import instructionImg1 from '../assets/instruction1.webp'; // Заглушка
+import instructionImg2 from '../assets/instruction2.webp'; // Заглушка
+import instructionImg3 from '../assets/instruction3.webp'; // Заглушка
+import instructionImg4 from '../assets/instruction4.webp'; // Заглушка
+import instructionImg5 from '../assets/instruction5.webp'; // Заглушка
+import instructionImg6 from '../assets/instruction6.webp'; // Заглушка
+import instructionImg7 from '../assets/instruction7.webp'; // Заглушка
 
 const instructionImages = [
     instructionImg1,

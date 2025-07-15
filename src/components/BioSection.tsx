@@ -1,4 +1,4 @@
-import bioFoto from '../assets/bio_foto.svg';
+import bioFoto from '../assets/bio_foto.webp';
 
 const BioSection = () => {
   const teamRoles = [

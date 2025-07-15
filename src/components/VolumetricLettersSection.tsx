@@ -1,5 +1,5 @@
-import letter1 from '../assets/letter1.svg';
-import letter2 from '../assets/letter2.svg';
+import letter1 from '../assets/letter1.webp';
+import letter2 from '../assets/letter2.webp';
 
 const Card = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <div className={`border border-white rounded-3xl p-6 md:py-[60px] md:px-[40px] ${className}`}>

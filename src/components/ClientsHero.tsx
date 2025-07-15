@@ -1,4 +1,4 @@
-import clientBg from '../assets/client.svg';
+import clientBg from '../assets/client.webp';
 
 function ClientsHero() {
   return (

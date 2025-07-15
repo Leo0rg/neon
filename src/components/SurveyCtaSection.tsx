@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import SurveyModal from './SurveyModal';
-import surveyBg from '../assets/survey.svg'; 
+import surveyBg from '../assets/survey.webp'; 
 
 const SurveyCtaSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

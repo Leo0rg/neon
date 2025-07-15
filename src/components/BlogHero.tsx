@@ -1,4 +1,4 @@
-import heroBackground from '../assets/blog.svg'; 
+import heroBackground from '../assets/blog.webp'; 
 
 function BlogHero() {
   return (

@@ -1,4 +1,4 @@
-import heroBackground from '../assets/work.svg';
+import heroBackground from '../assets/work.webp';
 
 const WorksHero = () => {
   return (

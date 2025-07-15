@@ -1,4 +1,4 @@
-import heroBackground from '../assets/FAQ.svg';
+import heroBackground from '../assets/FAQ.webp';
 
 function FAQHero() {
   return (

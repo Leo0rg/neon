@@ -1,8 +1,8 @@
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import card1 from '../assets/card1.svg';
-import card2 from '../assets/card2.svg';
-import card3 from '../assets/card3.svg';
+import card1 from '../assets/card1.webp';
+import card2 from '../assets/card2.webp';
+import card3 from '../assets/card3.webp';
 
 interface Category {
   id: number;

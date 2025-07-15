@@ -1,4 +1,4 @@
-import timelineImage from '../assets/deadlines.svg'; 
+import timelineImage from '../assets/deadlines.webp'; 
 
 const TimelineSection = () => {
   return (

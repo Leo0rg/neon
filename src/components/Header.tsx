@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaWhatsapp, FaTelegramPlane, FaBars, FaYoutube } from 'react-icons/fa';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.webp';
 
 const navLinks = [
   { title: 'О нас', href: '/about' },

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import logo2 from '../assets/logo2.svg';
+import logo2 from '../assets/logo2.webp';
 import { FaWhatsapp, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
 
 function Footer() {

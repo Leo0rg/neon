@@ -1,4 +1,4 @@
-import a_foto from '../assets/a_foto.svg';
+import a_foto from '../assets/a_foto.webp';
 
 function PricingSection() {
   return (

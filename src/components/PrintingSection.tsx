@@ -1,5 +1,5 @@
-import printImage from '../assets/print.svg'; 
-import print2Image from '../assets/print2.svg'; 
+import printImage from '../assets/print.webp'; 
+import print2Image from '../assets/print2.webp'; 
 
 const Card = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <div className={`border border-white rounded-3xl p-6 md:py-[60px] md:px-[40px] ${className}`}>
