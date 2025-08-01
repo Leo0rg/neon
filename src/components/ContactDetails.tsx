@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaTelegramPlane, FaViber } from 'react-icons/fa';
+import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 
 function ContactDetails() {
     return (
