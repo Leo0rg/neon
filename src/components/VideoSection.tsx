@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useRef, useEffect } from 'react';
-import videoSrc from '../assets/videoMain.mp4';
+import videoSrc from '../assets/videoMain.webm';
 
 function VideoSection() {
   const navigate = useNavigate();
