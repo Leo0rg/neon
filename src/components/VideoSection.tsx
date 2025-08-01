@@ -1,14 +1,34 @@
 import { useNavigate } from 'react-router-dom';
+import { useRef, useEffect } from 'react';
+import videoSrc from '../assets/videoMain.mp4';
 
 function VideoSection() {
   const navigate = useNavigate();
-  const videoUrl = "https://youtube.com/shorts/9wcfpmmGinQ?si=4yEJkR56xHOu23AQ";
-  const videoId = "9wcfpmmGinQ"; // ID видео из URL
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`; // Высокое качество
-  // Альтернативные URL для превью:
-  // `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` - Стандартное качество
-  // `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` - Среднее качество
-  // `https://img.youtube.com/vi/${videoId}/sddefault.jpg` - Высокое качество
+  const videoRef = useRef<HTMLVideoElement>(null);
+  
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoElement.play();
+        } else {
+          videoElement.pause();
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    observer.observe(videoElement);
+
+    return () => {
+      observer.unobserve(videoElement);
+    };
+  }, []);
   
   const handleNavigate = () => {
     navigate('/works#works-hero');
@@ -46,30 +66,17 @@ function VideoSection() {
           
           {/* Видео блок */}
           <div className="w-full md:w-1/2">
-            <a 
-              href={videoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="block relative rounded-xl overflow-hidden aspect-[9/16] max-w-[350px] mx-auto"
-            >
-              {/* Превью видео */}
-              <img 
-                src={thumbnailUrl} 
-                alt="Видео превью" 
+            <div className="relative rounded-xl overflow-hidden aspect-[9/16] max-w-[350px] mx-auto">
+              <video 
+                ref={videoRef}
+                src={videoSrc}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Если изображение не загрузилось, используем запасной вариант
-                  e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                }}
+                loop
+                muted 
+                playsInline 
+                preload="metadata"
               />
-              
-              {/* Кнопка воспроизведения */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[16px] border-l-black ml-1"></div>
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import letter1 from '../assets/letter1.webp';
 import letter2 from '../assets/letter2.webp';
+import letter3 from '../assets/letter3.webp';
 
 const Card = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <div className={`border border-white rounded-3xl p-6 md:py-[60px] md:px-[40px] ${className}`}>
@@ -17,6 +18,9 @@ const VolumetricLettersSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
           {/* Left Column */}
           <div className="flex flex-col gap-3 md:gap-6">
+            <div className="rounded-3xl overflow-hidden">
+              <img src={letter3} alt="Объемные буквы" className="w-full h-full object-cover" />
+            </div>
             <Card>
               <h3 className="text-xl md:text-2xl font-normal mb-4">Варианты световых букв</h3>
               <p className="text-base md:text-xl">
