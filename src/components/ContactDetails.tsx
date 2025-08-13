@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaTelegramPlane, FaViber } from 'react-icons/fa';
+import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 
 function ContactDetails() {
     return (
@@ -9,7 +9,7 @@ function ContactDetails() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                         <div className="border border-white p-6 rounded-2xl">
                             <h3 className="font-bold mb-2">Адрес</h3>
-                            <p className="text-white/70">Московская обл., г. Подольск, Гаражный проезд, д. 2</p>
+                            <p className="text-white/70">Московская область, городской округ Подольск, село Покров, Полевая улица, 3.</p>
                         </div>
                         <div className="border border-white p-6 rounded-2xl">
                             <h3 className="font-bold mb-2">Часы работы</h3>

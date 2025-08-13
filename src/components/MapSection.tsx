@@ -3,7 +3,7 @@ import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 const MapSection: React.FC = () => {
   const apiKey = '58288b3a-1a34-467d-ab3f-5297b7fbfc53';
-  const placemarkCoords = [55.451972, 37.561931];
+  const placemarkCoords = [55.440692, 37.634784];
 
   return (
     <section className="w-full h-[85vh]">

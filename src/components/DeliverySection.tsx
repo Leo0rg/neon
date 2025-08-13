@@ -24,9 +24,9 @@ const DeliverySection = () => {
           <div className="border border-white rounded-3xl p-6 md:pt-[60px] md:pb-[82px] md:px-10 h-full">
             <h3 className="text-lg md:text-xl font-normal mb-6">Самовывоз</h3>
             <div className="space-y-4 text-sm md:text-lg">
-              <p>По адресу:<br/>Московская обл., г. Подольск, Гаражный проезд, 24.</p>
+              <p>По адресу:<br/>Московская область, городской округ Подольск, село Покров, Полевая улица, 3.</p>
               <p>Время работы:<br/>пн-пт с 10:00 до 19:00.</p>
-              <p>Дата и время самовывоза уточняется по телефону<br/>8(952)-981-39-98<br/>или в WhatsApp<br/>8(961)-303-78-08.</p>
+              <p>Дата и время самовывоза уточняется по телефону<br/>8(952)-981-39-98<br/></p>
             </div>
           </div>
 
