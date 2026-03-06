@@ -134,13 +134,6 @@ const ContactForm: React.FC = () => {
                                         <span>Звонок</span>
                                     </label>
                                     <label className="flex items-center gap-3 cursor-pointer group">
-                                        <input type="checkbox" value="WhatsApp" onChange={handlePreferenceChange} checked={preferences.includes('WhatsApp')} className="sr-only peer" />
-                                        <span className="w-6 h-6 border-2 border-white rounded-md flex items-center justify-center transition-colors group-hover:border-[#E000D7] peer-checked:bg-[#E000D7] peer-checked:border-[#E000D7] peer-checked:hover:bg-[#812A7E] peer-checked:hover:border-[#812A7E]">
-                                            <FaCheck className="text-white text-sm opacity-0 peer-checked:opacity-100" />
-                                        </span>
-                                        <span>WhatsApp</span>
-                                    </label>
-                                    <label className="flex items-center gap-3 cursor-pointer group">
                                         <input type="checkbox" value="Telegram" onChange={handlePreferenceChange} checked={preferences.includes('Telegram')} className="sr-only peer" />
                                         <span className="w-6 h-6 border-2 border-white rounded-md flex items-center justify-center transition-colors group-hover:border-[#E000D7] peer-checked:bg-[#E000D7] peer-checked:border-[#E000D7] peer-checked:hover:bg-[#812A7E] peer-checked:hover:border-[#812A7E]">
                                             <FaCheck className="text-white text-sm opacity-0 peer-checked:opacity-100" />

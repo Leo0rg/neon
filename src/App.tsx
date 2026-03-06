@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,18 +12,21 @@ import BlogPage from './pages/BlogPage';
 import WorksPage from './pages/WorksPage';
 import PolicyPage from './pages/PolicyPage';
 import PostPage from './pages/PostPage';
+import SurveyModal from './components/SurveyModal';
 
 
 function App() {
+  const [isSurveyOpen, setSurveyOpen] = useState(false);
+
   return (
     <Router>
-      <Header />
+      <Header onOpenSurvey={() => setSurveyOpen(true)} />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/" element={<HomePage onOpenSurvey={() => setSurveyOpen(true)} />} />
+        <Route path="/about" element={<AboutPage onOpenSurvey={() => setSurveyOpen(true)} />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/clients" element={<ClientsPage />} />
-        <Route path="/works" element={<WorksPage />} />
+        <Route path="/works" element={<WorksPage onOpenSurvey={() => setSurveyOpen(true)} />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
@@ -30,6 +34,7 @@ function App() {
         <Route path="/blog/:slug" element={<PostPage />} />
       </Routes>
       <Footer />
+      <SurveyModal isOpen={isSurveyOpen} onClose={() => setSurveyOpen(false)} />
     </Router>
   );
 }

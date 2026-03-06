@@ -1,6 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import heroBackground from '../assets/FAQ.webp';
 
 function FAQHero() {
+  const navigate = useNavigate();
+
+  const handleQuestionClick = () => {
+    navigate('/contacts');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <section className="w-full overflow-hidden bg-[#161616]">
       <div className="mx-auto px-[5%] md:px-[15%]">
@@ -23,14 +33,12 @@ function FAQHero() {
             <p className="text-base md:text-2xl font-medium opacity-90 mb-8">
               Не уверены в том, что ищете? Наша отзывчивая и дружелюбная команда всегда готова помочь вам в этом процессе, предлагая индивидуальные консультации по телефону или в удобном для вас мессенджере.
             </p>
-            <a 
-              href="https://api.whatsapp.com/send?phone=79529813998"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button 
+              onClick={handleQuestionClick}
               className="bg-transparent border border-white rounded-full px-8 py-3 w-full md:w-auto inline-flex justify-center items-center hover:bg-gradient-to-r from-[#E601C9] to-[#D504D8] hover:border-transparent transition-all"
             >
               Задать вопрос
-            </a>
+            </button>
           </div>
         </div>
       </div>

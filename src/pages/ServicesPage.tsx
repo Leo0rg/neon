@@ -13,6 +13,7 @@ function ServicesPage() {
     <>
       <ServiceHero />
       <ServiceCategoriesSection />
+      <SurveyCtaSection />
       <div id="neon-signs">
         <NeonSignSection />
       </div>
@@ -31,7 +32,6 @@ function ServicesPage() {
       <div id="non-standard-products">
         <NonStandardProductsSection />
       </div>
-      <SurveyCtaSection />
     </>
   );
 }

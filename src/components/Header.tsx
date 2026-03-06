@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaWhatsapp, FaTelegramPlane, FaBars, FaYoutube } from 'react-icons/fa';
+import { FaTelegramPlane, FaBars, FaYoutube, FaPhoneAlt } from 'react-icons/fa';
 import logo from '../assets/logo.webp';
 
 const navLinks = [
@@ -13,9 +13,20 @@ const navLinks = [
   { title: 'Контакты', href: '/contacts' },
 ];
 
-function Header() {
+interface HeaderProps {
+  onOpenSurvey: () => void;
+}
+
+function Header({ onOpenSurvey }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showCopiedTooltip, setShowCopiedTooltip] = useState(false);
   const location = useLocation();
+
+  const handlePhoneCopy = () => {
+    navigator.clipboard.writeText('+79529813998');
+    setShowCopiedTooltip(true);
+    setTimeout(() => setShowCopiedTooltip(false), 2000);
+  };
 
   return (
     <header className="bg-[#161616] z-50 relative text-white">
@@ -56,24 +67,32 @@ function Header() {
         <div className="flex items-center space-x-2 lg:space-x-2">
           {/* Desktop Contacts */}
           <div className="hidden md:flex items-center space-x-2">
-            <span className="text-base font-medium whitespace-nowrap">+7 952 981 39 98</span>
-            <a href="https://api.whatsapp.com/send?phone=79529813998" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-[#E000D7] transition-colors">
-              <FaWhatsapp />
-            </a>
+            <div className="relative">
+              <button 
+                onClick={handlePhoneCopy}
+                className="text-xl hover:text-[#E000D7] transition-colors flex items-center"
+                title="Скопировать номер телефона"
+              >
+                <FaPhoneAlt className="text-[1.1rem]" />
+              </button>
+              {showCopiedTooltip && (
+                <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-[#E000D7] text-white text-xs px-3 py-1 rounded whitespace-nowrap z-10">
+                  Скопировано!
+                </div>
+              )}
+            </div>
             <a href="https://t.me/Bogorodov_Neon" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-[#E000D7] transition-colors">
               <FaTelegramPlane />
             </a>
           </div>
 
           {/* Order Button */}
-          <a
-            href="https://api.whatsapp.com/send?phone=79529813998"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={onOpenSurvey}
             className="bg-transparent text-white border border-white rounded-full px-6 py-2 text-base font-medium whitespace-nowrap hover:bg-gradient-to-r from-[#E601C9] to-[#D504D8] hover:border-transparent transition-all"
           >
             Заказать
-          </a>
+          </button>
         </div>
       </div>
 
@@ -97,9 +116,6 @@ function Header() {
             <li className="pt-2 border-t border-gray-700 mt-4">
               <span className="text-base font-medium block mb-2">+7 952 981 39 98</span>
               <div className="flex space-x-4">
-                <a href="https://api.whatsapp.com/send?phone=79529813998" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-[#E000D7] transition-colors">
-                  <FaWhatsapp />
-                </a>
                 <a href="https://t.me/Bogorodov_Neon" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-[#E000D7] transition-colors">
                   <FaTelegramPlane />
                 </a>

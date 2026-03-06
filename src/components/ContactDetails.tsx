@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 function ContactDetails() {
     return (
@@ -17,14 +17,11 @@ function ContactDetails() {
                         </div>
                         <div className="border border-white p-6 rounded-2xl">
                             <h3 className="font-bold mb-2">Связаться с нами</h3>
-                            <p className="text-white/70">Телефон или WhatsApp: +7 952 981-39-98</p>
+                            <p className="text-white/70">Телефон: +7 952 981-39-98</p>
                         </div>
                         <div className="border border-white p-6 rounded-2xl">
                             <h3 className="font-bold mb-2">Наши соцсети</h3>
                             <div className="flex gap-4 text-2xl">
-                                <a href="https://api.whatsapp.com/send?phone=79529813998" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#E000D7]">
-                                    <FaWhatsapp className="cursor-pointer" />
-                                </a>
                                 <a href="https://t.me/Bogorodov_Neon" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#E000D7]">
                                     <FaTelegramPlane className="cursor-pointer" />
                                 </a>

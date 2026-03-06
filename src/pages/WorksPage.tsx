@@ -1,10 +1,16 @@
 import WorksHero from '../components/WorksHero';
+import ContactSection from '../components/ContactSection';
 import WorksMenu from '../components/WorksMenu';
 
-const WorksPage = () => {
+interface WorksPageProps {
+  onOpenSurvey: () => void;
+}
+
+const WorksPage = ({ onOpenSurvey }: WorksPageProps) => {
   return (
     <>
       <WorksHero />
+      <ContactSection onOpenSurvey={onOpenSurvey} />
       <WorksMenu />
     </>
   );

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { FaCheck } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import giftImage from '../assets/heart.webp';
 import apiClient from '../services/api';
 
@@ -25,6 +27,7 @@ const SubmissionForm = ({ onSubmit, onBack, isSubmitting }: { onSubmit: (data: a
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [contactMethod, setContactMethod] = useState<string[]>([]);
+  const [policyAccepted, setPolicyAccepted] = useState(false);
 
   const handleContactMethodChange = (method: string) => {
     setContactMethod(prev => 
@@ -65,7 +68,7 @@ const SubmissionForm = ({ onSubmit, onBack, isSubmitting }: { onSubmit: (data: a
         <div className="mt-6">
           <p className="mb-3 text-sm md:text-base">Предпочтительный способ связи</p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            {['Звонок', 'WhatsApp', 'Telegram'].map(method => (
+            {['Звонок', 'Telegram'].map(method => (
               <label key={method} className="flex items-center cursor-pointer">
                 <input 
                   type="checkbox" 
@@ -78,9 +81,22 @@ const SubmissionForm = ({ onSubmit, onBack, isSubmitting }: { onSubmit: (data: a
             ))}
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mt-auto pt-6">
+        <label className="flex items-start gap-3 cursor-pointer group mt-6">
+          <input 
+            type="checkbox" 
+            checked={policyAccepted}
+            onChange={(e) => setPolicyAccepted(e.target.checked)}
+            className="sr-only peer" 
+            required 
+          />
+          <span className="w-6 h-6 flex-shrink-0 border-2 border-white rounded-md flex items-center justify-center transition-colors group-hover:border-[#E000D7] peer-checked:bg-[#E000D7] peer-checked:border-[#E000D7] peer-checked:hover:bg-[#812A7E] peer-checked:hover:border-[#812A7E]">
+            <FaCheck className="text-white text-sm opacity-0 peer-checked:opacity-100" />
+          </span>
+          <span className="text-sm md:text-base">Я согласен с <Link to="/policy" className="text-[#F077EB] hover:underline">Политикой обработки данных</Link></span>
+        </label>
+        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mt-6">
             <button type="button" onClick={onBack} className="w-full sm:w-auto bg-transparent border border-white text-white font-normal py-3 px-8 rounded-full text-base md:text-lg transition-all hover:bg-gradient-to-r from-[#E601C9] to-[#D504D8] hover:border-transparent">Назад</button>
-            <button type="submit" disabled={isSubmitting} className="w-full sm:w-auto bg-white text-black font-normal py-3 px-8 rounded-full text-base md:text-lg transition-all hover:bg-gradient-to-r from-[#E601C9] to-[#D504D8] hover:border-transparent hover:text-white disabled:opacity-50">
+            <button type="submit" disabled={isSubmitting || !policyAccepted} className="w-full sm:w-auto bg-white text-black font-normal py-3 px-8 rounded-full text-base md:text-lg transition-all hover:bg-gradient-to-r from-[#E601C9] to-[#D504D8] hover:border-transparent hover:text-white disabled:opacity-50">
               {isSubmitting ? 'Отправка...' : 'Отправить'}
             </button>
         </div>

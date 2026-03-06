@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import logo2 from '../assets/logo2.webp';
-import { FaWhatsapp, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
+import { FaTelegramPlane, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
   const navigate = useNavigate();
@@ -44,7 +44,6 @@ function Footer() {
 
   const SocialIcons = () => (
     <div className="flex space-x-4">
-      <a href="https://api.whatsapp.com/send?phone=79529813998" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-[#E000D7] transition-colors"><FaWhatsapp /></a>
       <a href="https://t.me/Bogorodov_Neon" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-[#E000D7] transition-colors"><FaTelegramPlane /></a>
       <a href="https://youtube.com/@bogorodov_neon?si=CoZTGSv2NNbADpHG" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-[#E000D7] transition-colors"><FaYoutube /></a>
     </div>

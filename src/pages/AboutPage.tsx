@@ -4,14 +4,18 @@ import MissionSection from '../components/MissionSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
 
-function AboutPage() {
+interface AboutPageProps {
+  onOpenSurvey: () => void;
+}
+
+function AboutPage({ onOpenSurvey }: AboutPageProps) {
   return (
     <>
       <AboutHero />
+      <ContactSection onOpenSurvey={onOpenSurvey} />
       <BioSection />
       <MissionSection />
       <TestimonialsSection />
-      <ContactSection />
     </>
   );
 }

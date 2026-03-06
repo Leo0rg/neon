@@ -1,5 +1,6 @@
 import ClientsHero from '../components/ClientsHero';
 import ClientNav from '../components/ClientNav';
+import SurveyCtaSection from '../components/SurveyCtaSection';
 import DesignSection from '../components/DesignSection';
 import MontageSection from '../components/MontageSection';
 import WindowMontageSection from '../components/WindowMontageSection';
@@ -13,6 +14,7 @@ function ClientsPage() {
     <div className="bg-[#161616]">
       <ClientsHero />
       <ClientNav />
+      <SurveyCtaSection />
       <div id="design">
         <DesignSection />
       </div>
